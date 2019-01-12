@@ -49,7 +49,5 @@ getUser(2)
     console.log(weather);
     return weather;
   })
-  .then(weather => {
-    return saveToFile(weather);
-  })
-  .catch(error => console.log(error));
+  .catch(error => console.log(error))
+  .finally(weather => saveToFile(weather));

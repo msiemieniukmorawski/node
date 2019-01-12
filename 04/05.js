@@ -19,6 +19,11 @@ function getUser(id) {
 // getUser(2).then(user => console.log(user))
 //     .catch(error => console.log(error))
 
-Promise.all(id.map(x => getUser(x))).then(resp => {
-  console.log(resp);
-});
+Promise.all(id.map(x => getUser(x)))
+  .then(resp => {})
+  .catch(error => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("finished");
+  });

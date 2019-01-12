@@ -28,6 +28,6 @@ async function callStat(args) {
   )}`;
 
   writeFilePromise("./04/10.txt", message)
-    .then(() => console.log("file created successfully with promisify!"))
-    .catch(error => console.log(error));
+    .catch(error => console.log(error))
+    .finally(() => console.log("file created successfully with promisify!"));
 }
